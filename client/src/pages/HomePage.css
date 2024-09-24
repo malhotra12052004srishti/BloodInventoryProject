@@ -1,0 +1,59 @@
+/* * {
+    background-color: rgb(161, 31, 31);
+  } */
+.bg-image {
+    background-image: url('https://www.bhmpics.com/downloads/blood-bank-wallpaper/9.screen-0.jpg.webp');
+    /* background-color: rgb(161, 31, 31); */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
+  
+  .bg-light {
+    background-color: #f7f7f7;
+  }
+  
+  .text-white {
+    color: #ffffff;
+  }
+  
+  .pt-5 {
+    padding-top: 5rem;
+  }
+  
+  .pb-5 {
+    padding-bottom: 5rem;
+  }
+  
+  .card {
+    margin-bottom: 2rem;
+  }
+  
+  .card-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .card-body {
+    padding: 2rem;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    color: #666666;
+  }
+  
+  .button {
+    margin-top: 1rem;
+  }
+
+  #b1{
+    background-color: black;
+    margin: 10px;
+  }
