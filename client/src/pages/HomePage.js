@@ -1,9 +1,26 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
-import './HomePage.css';
+import './HomePage.css'; // Assuming this is your CSS file for HomePage
+import { Link } from 'react-router-dom'; // Import Link for navigation
+import { useSelector } from 'react-redux';
+import Spinner from '../components/shared/Spinner';
+import { useNavigate } from 'react-router-dom';
 
 const HomePage = () => {
+  const {loading, error} = useSelector(state => state.auth)
+
+  const navigate = useNavigate();
+  // logout handler
+  const handleLogout = () => {
+    localStorage.clear();
+    alert("LogOut Successfully");
+    navigate('/login');
+  }
+
   return (
+    <>
+    {error && <span>{alert(error)}</span>}
+    {loading ? (<Spinner/>) : (
     <Container fluid className="p-0">
       <Row className="bg-image">
         <Col md={12} className="text-center pt-5 pb-5">
@@ -11,6 +28,7 @@ const HomePage = () => {
           <p className="text-white">A platform to manage blood donations and requests</p>
           <Button id='b1' variant="primary" href="/login">Login</Button>
           <Button id='b1' variant="secondary" href="/register">Register</Button>
+          <Button id='b1' onClick={handleLogout} >LogOut</Button>
         </Col>
       </Row>
       <Row className="pt-5 pb-5">
@@ -47,11 +65,15 @@ const HomePage = () => {
       </Row>
       <Row className="bg-light pt-5 pb-5">
         <Col md={12} className="text-center">
-          <h2>About Us</h2>
+          <Link to="/about">
+            <Button variant="primary">About Us</Button>
+          </Link>
           <p>We are a team of developers who aim to create a platform to manage blood donations and requests</p>
         </Col>
       </Row>
     </Container>
+    )}
+    </>
   );
 };
 

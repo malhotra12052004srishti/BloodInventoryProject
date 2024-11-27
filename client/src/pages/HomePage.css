@@ -1,7 +1,7 @@
 /* * {
     background-color: rgb(161, 31, 31);
   } */
-.bg-image {
+  .bg-image {
     background-image: url('https://www.bhmpics.com/downloads/blood-bank-wallpaper/9.screen-0.jpg.webp');
     /* background-color: rgb(161, 31, 31); */
     background-size: cover;
@@ -54,6 +54,8 @@
   }
 
   #b1{
-    background-color: black;
+    background-color: rgb(24, 15, 15);
     margin: 10px;
+    border: black;
+    /* height: 50px; */
   }
